@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #current-size{
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 800px;
+            height: 800px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+
+        .square {
+            transition: background-color .1s;
+            background-color: white;
+            border: 1px solid black;
+            box-sizing: border-box;
+            transition: background-color .3s;
+        }
+
+        .square:hover {
+            background-color: black;
+        }
+
+        button {
+            padding: 20px 35px;
+            font-size: 16px;
+            margin: 10px 0px;
+            width: max-content;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-bottom: 0px;">Etch-A-Sketch</h1>
+    <p style="margin-bottom: 50px">Hover your mouse over the grid to start your artistic journey!</p>
+    <div>
+        <button id="config">Grid Side Length</button>
+        <button id="bw">Black & White</button>
+        <button id="rgb">Random RGB</button>
+        <button id="eraser">Erasor</button>
+    </div>
+    <button id="clear-grid">Clear Grid</button>
+    <p>Max Side Length: <span id="current-size">100</span></p>
+    <p>Current Side Length: <span id="current-length">16</span>px</p>
+    <p>Current Color Mode: <span id="current-mode">Black & White</span></p>
+    <div class="container">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
